@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomsTown - Groups</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        /* Header styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo .icon {
+            background-color: white;
+            color: #007bff;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        
+        .search-bar {
+            display: flex;
+        }
+        
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+        
+        /* Main content styles */
+        main {
+            margin-top: 20px;
+        }
+        
+        .groups-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .groups-section h2 {
+            margin-top: 0;
+        }
+        
+        .groups-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .group-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .group-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        
+        .group-card h4 {
+            margin: 0;
+        }
+        
+        .group-card p {
+            margin-top: 5px;
+            color: #555;
+        }
+        
+        .group-card button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .group-card button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Footer styles */
+        footer {
+            text-align: center;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        footer ul li {
+            margin-right: 20px;
+        }
+        
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="icon">TT</div> TomsTown
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ecommerce.html">E-commerce</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search groups..." id="search-input">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="groups-section">
+            <div class="container">
+                <h2>Groups</h2>
+                <div class="groups-list" id="groups-list">
+                    <!-- Groups will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TomsTown</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadGroups();
+        });
+
+        function loadGroups() {
+            const groups = [
+                { name: 'Tech Enthusiasts', description: 'A group for tech lovers to share and discuss the latest in technology.', image: 'group1.jpg' },
+                { name: 'Book Club', description: 'Join our book club to discuss and share insights on the latest books.', image: 'group2.jpg' },
+                { name: 'Fitness Freaks', description: 'A community for fitness enthusiasts to share tips and motivate each other.', image: 'group3.jpg' },
+                { name: 'Travel Buddies', description: 'Share your travel experiences and find new travel buddies.', image: 'group4.jpg' },
+                // Add more groups as needed
+            ];
+
+            const groupsList = document.getElementById('groups-list');
+            groups.forEach(group => {
+                const groupCard = document.createElement('div');
+                groupCard.className = 'group-card';
+                
+                const groupImg = document.createElement('img');
+                groupImg.src = group.image;
+                groupImg.alt = group.name;
+                
+                const groupName = document.createElement('h4');
+                groupName.textContent = group.name;
+                
+                const groupDescription = document.createElement('p');
+                groupDescription.textContent = group.description;
+                
+                const groupButton = document.createElement('button');
+                groupButton.textContent = 'Join Group';
+                groupButton.onclick = () => joinGroup(group.name);
+
+                groupCard.appendChild(groupImg);
+                groupCard.appendChild(groupName);
+                groupCard.appendChild(groupDescription);
+                groupCard.appendChild(groupButton);
+                
+                groupsList.appendChild(groupCard);
+            });
+        }
+
+        function joinGroup(name) {
+            alert(`You have joined the ${name} group!`);
+            // Add join group logic here
+        }
+    </script>
+</body>
+</html>

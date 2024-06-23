@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomsTown - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        /* Header styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo .icon {
+            background-color: white;
+            color: #007bff;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        
+        .search-bar {
+            display: flex;
+        }
+        
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+        
+        /* Main content styles */
+        main {
+            margin-top: 20px;
+        }
+        
+        .about-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-section h2 {
+            margin-top: 0;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .about-content img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            flex: 1;
+            margin: 0;
+        }
+        
+        .team-section {
+            margin-top: 40px;
+        }
+        
+        .team-section h3 {
+            margin-top: 0;
+        }
+        
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .team-member {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        
+        .team-member h4 {
+            margin: 0;
+        }
+        
+        .team-member p {
+            margin-top: 5px;
+            color: #555;
+        }
+        
+        /* Footer styles */
+        footer {
+            text-align: center;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        footer ul li {
+            margin-right: 20px;
+        }
+        
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="icon">TT</div> TomsTown
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ecommerce.html">E-commerce</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="dating.html">Dating</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <img src="about-us.jpg" alt="About Us">
+                    <p>Welcome to TomsTown! We are a dynamic team committed to connecting people through our innovative social media platform. Our mission is to provide a space where users can share their experiences, stay updated, and engage with a community that values meaningful interactions. Join us as we continue to grow and make a difference in the digital world.</p>
+                </div>
+                <div class="team-section">
+                    <h3>Meet the Team</h3>
+                    <div class="team">
+                        <div class="team-member">
+                            <img src="team-member1.jpg" alt="Team Member 1">
+                            <h4>Thomas Keyt</h4>
+                            <p>Founder & CEO</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="team-member2.jpg" alt="Team Member 2">
+                            <h4>Rachel Keyt</h4>
+                            <p>Co-Founder & COO</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="team-member3.jpg" alt="Team Member 3">
+                            <h4>Jane Doe</h4>
+                            <p>Chief Technology Officer</p>
+                        </div>
+                        <!-- Add more team members as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TomsTown</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
+

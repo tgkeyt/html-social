@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomsTown - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+</head>
+
+<body>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        header,
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo .icon {
+            background-color: white;
+            color: #007bff;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .search-bar {
+            display: flex;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        /* Main content styles */
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        /* Feed styles */
+        .feed {
+            width: 65%;
+        }
+
+        .create-post textarea,
+        .create-post input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .create-post button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .create-post {
+            margin-bottom: 20px;
+        }
+
+        .post {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .post-header img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .post-actions button {
+            background: none;
+            border: none;
+            color: #007bff;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .comments .comment {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .comments .comment img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .profile-summary img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+        }
+
+        .profile-summary h2 {
+            margin: 10px 0;
+        }
+
+        .sidebar h2 {
+            margin-top: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Footer styles */
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer ul li {
+            margin-right: 20px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navigation-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation-links a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="icon">TT</div> TomsTown
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ecommerce.html">E-commerce</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="dating.html">Dating</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="feed">
+            <div class="container">
+                <h2>News Feed</h2>
+                <div class="create-post">
+                    <textarea placeholder="What's on your mind?" id="post-content"></textarea>
+                    <input type="file" id="post-image">
+                    <button onclick="createPost()">Post</button>
+                </div>
+                <div id="posts-container">
+                    <!-- Posts will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <div class="container">
+                <div class="profile-summary">
+                    <img src="C:\Users\gregk\OneDrive\Desktop\Web Development\Web Development Projects\4.1 Webpages\assets\images\My Photo.jpg" alt="Profile Picture">
+                    <h2>Thomas Keyt</h2>
+                    <a href="profile.html">View Profile</a>
+                </div>
+                <h2>FRIENDS</h2>
+                <ul id="friends-list">
+                    <!-- Friends list will be dynamically added here -->
+                </ul>
+                <h2>GROUPS</h2>
+                <ul id="groups-list">
+                    <!-- Groups list will be dynamically added here -->
+                </ul>
+                <h2>EVENTS</h2>
+                <ul id="events-list">
+                    <!-- Events list will be dynamically added here -->
+                </ul>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TomsTown</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFriends();
+            loadGroups();
+            loadEvents();
+            loadPosts();
+        });
+
+        function createPost() {
+            const postContent = document.getElementById('post-content').value;
+            const postImage = document.getElementById('post-image').files[0];
+
+            if (postContent.trim() === '' && !postImage) {
+                alert('Post content cannot be empty.');
+                return;
+            }
+
+            // Create post element
+            const post = document.createElement('div');
+            post.className = 'post';
+
+            const postHeader = document.createElement('div');
+            postHeader.className = 'post-header';
+            const userImg = document.createElement('img');
+            userImg.src = 'user-placeholder.jpg';
+            userImg.alt = 'User';
+            const postInfo = document.createElement('div');
+            const postUser = document.createElement('h3');
+            postUser.textContent = 'Thomas Keyt';
+            const postTime = document.createElement('span');
+            postTime.textContent = 'Just now';
+            postInfo.appendChild(postUser);
+            postInfo.appendChild(postTime);
+            postHeader.appendChild(userImg);
+            postHeader.appendChild(postInfo);
+            post.appendChild(postHeader);
+
+            const postText = document.createElement('p');
+            postText.textContent = postContent;
+            post.appendChild(postText);
+
+            if (postImage) {
+                const postImg = document.createElement('img');
+                postImg.src = URL.createObjectURL(postImage);
+                post.appendChild(postImg);
+            }
+
+            const postActions = document.createElement('div');
+            postActions.className = 'post-actions';
+            const likeButton = document.createElement('button');
+            likeButton.innerHTML = '<i class="fas fa-thumbs-up"></i> Like';
+            const dislikeButton = document.createElement('button');
+            dislikeButton.innerHTML = '<i class="fas fa-thumbs-down"></i> Dislike';
+            const commentButton = document.createElement('button');
+            commentButton.innerHTML = '<i class="fas fa-comment"></i> Comment';
+            const shareButton = document.createElement('button');
+            shareButton.innerHTML = '<i class="fas fa-share"></i> Share';
+            postActions.appendChild(likeButton);
+            postActions.appendChild(dislikeButton);
+            postActions.appendChild(commentButton);
+            postActions.appendChild(shareButton);
+            post.appendChild(postActions);
+
+            const commentsSection = document.createElement('div');
+            commentsSection.className = 'comments';
+            post.appendChild(commentsSection);
+
+            const postsContainer = document.getElementById('posts-container');
+            postsContainer.insertBefore(post, postsContainer.firstChild);
+
+            // Clear post content
+            document.getElementById('post-content').value = '';
+            document.getElementById('post-image').value = '';
+        }
+
+        function loadFriends() {
+            const friendsList = document.getElementById('friends-list');
+            const friends = ['Friend 1', 'Friend 2', 'Friend 3'];
+            friends.forEach(friend => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = 'friends.html';
+                a.textContent = friend;
+                li.appendChild(a);
+                friendsList.appendChild(li);
+            });
+        }
+
+        function loadGroups() {
+            const groupsList = document.getElementById('groups-list');
+            const groups = ['Group 1', 'Group 2', 'Group 3'];
+            groups.forEach(group => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = 'groups.html';
+                a.textContent = group;
+                li.appendChild(a);
+                groupsList.appendChild(li);
+            });
+        }
+
+        function loadEvents() {
+            const eventsList = document.getElementById('events-list');
+            const events = ['Event 1', 'Event 2', 'Event 3'];
+            events.forEach(event => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = 'events.html';
+                a.textContent = event;
+                li.appendChild(a);
+                eventsList.appendChild(li);
+            });
+        }
+
+        function loadPosts() {
+            const postsContainer = document.getElementById('posts-container');
+            const posts = [
+                {
+                    user: 'User 1',
+                    time: 'Just now',
+                    content: 'This is the content of the first post.',
+                    comments: ['Great post!', 'Nice!']
+                },
+                {
+                    user: 'User 2',
+                    time: '5 minutes ago',
+                    content: 'This is the content of the second post.',
+                    comments: ['Interesting.', 'Thanks for sharing!']
+                }
+            ];
+
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+
+                const postHeader = document.createElement('div');
+                postHeader.className = 'post-header';
+                const userImg = document.createElement('img');
+                userImg.src = 'user-placeholder.jpg';
+                userImg.alt = 'User';
+                const postInfo = document.createElement('div');
+                const postUser = document.createElement('h3');
+                postUser.textContent = post.user;
+                const postTime = document.createElement('span');
+                postTime.textContent = post.time;
+                postInfo.appendChild(postUser);
+                postInfo.appendChild(postTime);
+                postHeader.appendChild(userImg);
+                postHeader.appendChild(postInfo);
+                postElement.appendChild(postHeader);
+
+                const postText = document.createElement('p');
+                postText.textContent = post.content;
+                postElement.appendChild(postText);
+
+                const postActions = document.createElement('div');
+                postActions.className = 'post-actions';
+                const likeButton = document.createElement('button');
+                likeButton.innerHTML = '<i class="fas fa-thumbs-up"></i> Like';
+                const dislikeButton = document.createElement('button');
+                dislikeButton.innerHTML = '<i class="fas fa-thumbs-down"></i> Dislike';
+                const commentButton = document.createElement('button');
+                commentButton.innerHTML = '<i class="fas fa-comment"></i> Comment';
+                const shareButton = document.createElement('button');
+                shareButton.innerHTML = '<i class="fas fa-share"></i> Share';
+                postActions.appendChild(likeButton);
+                postActions.appendChild(dislikeButton);
+                postActions.appendChild(commentButton);
+                postActions.appendChild(shareButton);
+                postElement.appendChild(postActions);
+
+                const commentsSection = document.createElement('div');
+                commentsSection.className = 'comments';
+                post.comments.forEach(comment => {
+                    const commentElement = document.createElement('div');
+                    commentElement.className = 'comment';
+                    const commentUserImg = document.createElement('img');
+                    commentUserImg.src = 'user-placeholder.jpg';
+                    commentUserImg.alt = 'User';
+                    const commentText = document.createElement('p');
+                    commentText.textContent = comment;
+                    commentElement.appendChild(commentUserImg);
+                    commentElement.appendChild(commentText);
+                    commentsSection.appendChild(commentElement);
+                });
+                postElement.appendChild(commentsSection);
+
+                postsContainer.appendChild(postElement);
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomsTown - Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        /* Header styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo .icon {
+            background-color: white;
+            color: #007bff;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        
+        .search-bar {
+            display: flex;
+        }
+        
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+        
+        .search-bar button {
+            padding: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Main content styles */
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        /* Blog feed styles */
+        .blog-feed {
+            width: 65%;
+        }
+        
+        .categories {
+            margin-bottom: 20px;
+        }
+        
+        .categories button {
+            padding: 10px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .categories button:hover {
+            background-color: #0056b3;
+        }
+        
+        .post {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .post.featured {
+            border: 2px solid #24292e;
+        }
+        
+        .post img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .post h3 {
+            margin-top: 10px;
+        }
+        
+        .post span {
+            display: block;
+            color: #007bff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .post p {
+            margin-top: 10px;
+        }
+        
+        /* Sidebar styles */
+        .sidebar {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sidebar h2 {
+            margin-top: 0;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        
+        .sidebar ul li a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .sidebar ul li a:hover {
+            color: #0056b3;
+        }
+        
+        /* Footer styles */
+        footer {
+            text-align: center;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        footer ul li {
+            margin-right: 20px;
+        }
+        
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="icon">TT</div> TomsTown
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ecommerce.html">E-commerce</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="dating.html">Dating</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." id="search-input">
+                <button onclick="searchPosts()">Search</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="blog-feed">
+            <div class="container">
+                <h2>Blog</h2>
+                <div class="categories">
+                    <button onclick="filterPosts('All')">All</button>
+                    <button onclick="filterPosts('Tech')">Tech</button>
+                    <button onclick="filterPosts('Lifestyle')">Lifestyle</button>
+                    <button onclick="filterPosts('Finance')">Finance</button>
+                    <button onclick="filterPosts('Health')">Health</button>
+                </div>
+                <div id="featured-post">
+                    <!-- Featured post will be dynamically added here -->
+                </div>
+                <div id="blog-posts">
+                    <!-- Blog posts will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <div class="container">
+                <h2>Recent Posts</h2>
+                <ul id="recent-posts">
+                    <!-- Recent posts will be dynamically added here -->
+                </ul>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TomsTown</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFeaturedPost();
+            loadBlogPosts();
+            loadRecentPosts();
+        });
+
+        function loadFeaturedPost() {
+            const featuredPostContainer = document.getElementById('featured-post');
+            const featuredPost = {
+                title: 'How to Become a Billionaire',
+                category: 'Finance',
+                content: 'In this post, we will explore the steps needed to achieve billionaire status...',
+                image: 'billionaire.jpg'
+            };
+
+            const postElement = document.createElement('div');
+            postElement.className = 'post featured';
+            const postImg = document.createElement('img');
+            postImg.src = featuredPost.image;
+            const postTitle = document.createElement('h3');
+            postTitle.textContent = featuredPost.title;
+            const postCategory = document.createElement('span');
+            postCategory.textContent = featuredPost.category;
+            const postContent = document.createElement('p');
+            postContent.textContent = featuredPost.content;
+            
+            postElement.appendChild(postImg);
+            postElement.appendChild(postTitle);
+            postElement.appendChild(postCategory);
+            postElement.appendChild(postContent);
+            featuredPostContainer.appendChild(postElement);
+        }
+
+        function loadBlogPosts() {
+            const blogPostsContainer = document.getElementById('blog-posts');
+            const blogPosts = [
+                {
+                    title: 'The Future of Technology',
+                    category: 'Tech',
+                    content: 'Tech is evolving rapidly and in this post, we discuss the latest trends...',
+                    image: 'tech-future.jpg'
+                },
+                {
+                    title: 'Healthy Living Tips',
+                    category: 'Health',
+                    content: 'Staying healthy is crucial. Here are some tips to live a healthier life...',
+                    image: 'healthy-living.jpg'
+                },
+                // Add more posts as needed
+            ];
+
+            blogPosts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+                const postImg = document.createElement('img');
+                postImg.src = post.image;
+                const postTitle = document.createElement('h3');
+                postTitle.textContent = post.title;
+                const postCategory = document.createElement('span');
+                postCategory.textContent = post.category;
+                const postContent = document.createElement('p');
+                postContent.textContent = post.content;
+
+                postElement.appendChild(postImg);
+                postElement.appendChild(postTitle);
+                postElement.appendChild(postCategory);
+                postElement.appendChild(postContent);
+                blogPostsContainer.appendChild(postElement);
+            });
+        }
+
+        function loadRecentPosts() {
+            const recentPostsContainer = document.getElementById('recent-posts');
+            const recentPosts = [
+                'The Future of Technology',
+                'Healthy Living Tips',
+                // Add more recent posts as needed
+            ];
+
+            recentPosts.forEach(post => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#';
+                a.textContent = post;
+                li.appendChild(a);
+                recentPostsContainer.appendChild(li);
+            });
+        }
+
+        function filterPosts(category) {
+            const posts = document.querySelectorAll('.post');
+            posts.forEach(post => {
+                if (category === 'All' || post.querySelector('span').textContent === category) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+
+        function searchPosts() {
+            const searchInput = document.getElementById('search-input').value.toLowerCase();
+            const posts = document.querySelectorAll('.post');
+            posts.forEach(post => {
+                const title = post.querySelector('h3').textContent.toLowerCase();
+                const content = post.querySelector('p').textContent.toLowerCase();
+                if (title.includes(searchInput) || content.includes(searchInput)) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+

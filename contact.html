@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomsTown - Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        /* Header styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo .icon {
+            background-color: white;
+            color: #007bff;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        
+        .search-bar input {
+            padding: 5px;
+            margin-left: 20px;
+            border: none;
+            border-radius: 3px;
+        }
+        
+        /* Main content styles */
+        main {
+            margin-top: 20px;
+        }
+        
+        /* Contact section styles */
+        .contact-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-section h2 {
+            margin-top: 0;
+        }
+        
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-section label {
+            margin-top: 10px;
+        }
+        
+        .contact-section input, .contact-section textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .contact-section button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-section button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Map section styles */
+        .map-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-section h2 {
+            margin-top: 0;
+        }
+        
+        #map {
+            width: 100%;
+            height: 300px;
+            background-color: #e0e0e0;
+            /* Replace with actual Google Map embed */
+        }
+        
+        /* FAQ section styles */
+        .faq-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-section h2 {
+            margin-top: 0;
+        }
+        
+        .faq-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .faq-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .faq-section ul li h3 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+        
+        .faq-section ul li p {
+            margin: 5px 0 0 0;
+            color: #555;
+        }
+        
+        /* Footer styles */
+        footer {
+            text-align: center;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        footer ul li {
+            margin-right: 20px;
+        }
+        
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="icon">TT</div> TomsTown
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ecommerce.html">E-commerce</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="dating.html">Dating</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contact-form" onsubmit="return validateForm()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        <section class="map-section">
+            <div class="container">
+                <h2>Our Location</h2>
+                <div id="map">
+                    <!-- Embed a Google Map here -->
+                </div>
+            </div>
+        </section>
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <ul id="faq-list">
+                    <!-- FAQ items will be dynamically added here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TomsTown</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFAQs();
+        });
+
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('All fields are required.');
+                return false;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            // Submit form
+            alert('Form submitted successfully!');
+            return true;
+        }
+
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return re.test(email);
+        }
+
+        function loadFAQs() {
+            const faqList = document.getElementById('faq-list');
+            const faqs = [
+                { question: 'How can I reset my password?', answer: 'To reset your password, go to the settings page and click on "Reset Password".' },
+                { question: 'How do I contact customer support?', answer: 'You can contact customer support via email at support@tomstown.com or call us at (123) 456-7890.' },
+                { question: 'Where is your office located?', answer: 'Our office is located at 123 Main Street, Columbus, GA.' },
+                // Add more FAQs as needed
+            ];
+
+            faqs.forEach(faq => {
+                const li = document.createElement('li');
+                const question = document.createElement('h3');
+                question.textContent = faq.question;
+                const answer = document.createElement('p');
+                answer.textContent = faq.answer;
+                li.appendChild(question);
+                li.appendChild(answer);
+                faqList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+

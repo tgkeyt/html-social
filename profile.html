@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomsTown - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        header,
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo .icon {
+            background-color: white;
+            color: #007bff;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            margin-left: 20px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        /* Main content styles */
+        main {
+            margin-top: 20px;
+        }
+
+        /* Profile section styles */
+        .profile-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        .profile-header h2 {
+            margin: 0;
+        }
+
+        .profile-header button {
+            margin-left: auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .profile-header button:hover {
+            background-color: #0056b3;
+        }
+
+        #edit-profile-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #edit-profile-info label {
+            margin-top: 10px;
+        }
+
+        #edit-profile-info input,
+        #edit-profile-info textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        #edit-profile-info button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #edit-profile-info button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Friends section styles */
+        .friends-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .friends-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .friends-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .friends-section ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Recent activities section styles */
+        .recent-activities {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .recent-activities ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .recent-activities ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer ul li {
+            margin-right: 20px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="icon">TT</div> TomsTown
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ecommerce.html">E-commerce</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="dating.html">Dating</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-header">
+                    <img src="C:\Users\gregk\OneDrive\Desktop\Web Development\Web Development Projects\4.1 Webpages\assets\images\My Photo.jpg" alt="Profile Picture" id="profile-picture">
+                    <h2>Thomas Keyt</h2>
+                    <button onclick="editProfile()">Edit Profile</button>
+                </div>
+                <div id="profile-info">
+                    <p><strong>Location:</strong> Columbus, GA</p>
+                    <p><strong>Bio:</strong> Desk Property Adjuster at USAA. Mission to become the perfect human being: wealthy, healthy, genius, and humble.</p>
+                    <p><strong>Interests:</strong> UFC/MMA, comedy movies, reading, spending time with family.</p>
+                </div>
+                <div id="edit-profile-info" style="display: none;">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" value="Columbus, GA">
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio">Desk Property Adjuster at USAA. Mission to become the perfect human being: wealthy, healthy, genius, and humble.</textarea>
+                    <label for="interests">Interests:</label>
+                    <input type="text" id="interests" value="UFC/MMA, comedy movies, reading, spending time with family.">
+                    <button onclick="saveProfile()">Save</button>
+                </div>
+            </div>
+        </section>
+        <section class="friends-section">
+            <div class="container">
+                <h2>Friends</h2>
+                <ul id="friends-list">
+                    <!-- Friends will be dynamically added here -->
+                </ul>
+            </div>
+        </section>
+        <section class="recent-activities">
+            <div class="container">
+                <h2>Recent Activities</h2>
+                <ul id="activities-list">
+                    <!-- Recent activities will be dynamically added here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TomsTown</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFriends();
+            loadRecentActivities();
+        });
+
+        function editProfile() {
+            document.getElementById('profile-info').style.display = 'none';
+            document.getElementById('edit-profile-info').style.display = 'block';
+        }
+
+        function saveProfile() {
+            const location = document.getElementById('location').value;
+            const bio = document.getElementById('bio').value;
+            const interests = document.getElementById('interests').value;
+
+            document.getElementById('profile-info').innerHTML = `
+                <p><strong>Location:</strong> ${location}</p>
+                <p><strong>Bio:</strong> ${bio}</p>
+                <p><strong>Interests:</strong> ${interests}</p>
+            `;
+
+            document.getElementById('profile-info').style.display = 'block';
+            document.getElementById('edit-profile-info').style.display = 'none';
+        }
+
+        function loadFriends() {
+            const friendsList = document.getElementById('friends-list');
+            const friends = ['Friend 1', 'Friend 2', 'Friend 3', 'Friend 4', 'Friend 5'];
+            friends.forEach(friend => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = 'friends.html';
+                a.textContent = friend;
+                li.appendChild(a);
+                friendsList.appendChild(li);
+            });
+        }
+
+        function loadRecentActivities() {
+            const activitiesList = document.getElementById('activities-list');
+            const activities = [
+                'Liked a post by Friend 1',
+                'Commented on Friend 2\'s photo',
+                'Shared a post from the blog',
+                'Updated profile picture',
+                'Joined Group 1'
+            ];
+            activities.forEach(activity => {
+                const li = document.createElement('li');
+                li.textContent = activity;
+                activitiesList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomsTown - Dating</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        /* Header styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo .icon {
+            background-color: white;
+            color: #007bff;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        
+        .search-bar {
+            display: flex;
+        }
+        
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+        
+        /* Main content styles */
+        main {
+            margin-top: 20px;
+        }
+        
+        .dating-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dating-section h2 {
+            margin-top: 0;
+        }
+        
+        .dating-section .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .dating-section .profile img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        
+        .dating-section .profile h3 {
+            margin: 0;
+        }
+        
+        .dating-section .profile p {
+            margin: 5px 0;
+            color: #555;
+        }
+        
+        .dating-section .profile button {
+            margin-left: auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .dating-section .profile button:hover {
+            background-color: #0056b3;
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .profile-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 48%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        
+        .profile-card h4 {
+            margin: 0;
+        }
+        
+        .profile-card p {
+            margin-top: 5px;
+            color: #555;
+        }
+        
+        .profile-card button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .profile-card button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Footer styles */
+        footer {
+            text-align: center;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        footer ul li {
+            margin-right: 20px;
+        }
+        
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="icon">TT</div> TomsTown
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ecommerce.html">E-commerce</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="dating.html">Dating</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search profiles...">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="dating-section">
+            <div class="container">
+                <h2>Find Your Match</h2>
+                <div class="profile-section" id="profile-section">
+                    <!-- Profiles will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TomsTown</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProfiles();
+        });
+
+        function loadProfiles() {
+            const profiles = [
+                { name: 'Alice Johnson', age: 28, location: 'New York, NY', image: 'profile1.jpg' },
+                { name: 'John Smith', age: 30, location: 'Los Angeles, CA', image: 'profile2.jpg' },
+                { name: 'Emily Davis', age: 25, location: 'Chicago, IL', image: 'profile3.jpg' },
+                { name: 'Michael Brown', age: 27, location: 'Houston, TX', image: 'profile4.jpg' },
+                // Add more profiles as needed
+            ];
+
+            const profileSection = document.getElementById('profile-section');
+            profiles.forEach(profile => {
+                const profileCard = document.createElement('div');
+                profileCard.className = 'profile-card';
+                
+                const profileImg = document.createElement('img');
+                profileImg.src = profile.image;
+                profileImg.alt = profile.name;
+                
+                const profileName = document.createElement('h4');
+                profileName.textContent = profile.name;
+                
+                const profileAge = document.createElement('p');
+                profileAge.textContent = `${profile.age} years old`;
+                
+                const profileLocation = document.createElement('p');
+                profileLocation.textContent = profile.location;
+                
+                const profileButton = document.createElement('button');
+                profileButton.textContent = 'Connect';
+                profileButton.onclick = () => connectProfile(profile.name);
+
+                profileCard.appendChild(profileImg);
+                profileCard.appendChild(profileName);
+                profileCard.appendChild(profileAge);
+                profileCard.appendChild(profileLocation);
+                profileCard.appendChild(profileButton);
+                
+                profileSection.appendChild(profileCard);
+            });
+        }
+
+        function connectProfile(name) {
+            alert(`You have connected with ${name}!`);
+            // Add connect logic here
+        }
+    </script>
+</body>
+</html>

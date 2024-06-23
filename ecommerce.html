@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomsTown - E-commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        /* Header styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo .icon {
+            background-color: white;
+            color: #007bff;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        
+        .search-bar {
+            display: flex;
+        }
+        
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+        
+        .search-bar button {
+            padding: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+        
+        .cart {
+            margin-left: auto;
+            padding: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .cart:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Main content styles */
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        /* Categories section styles */
+        .categories-section {
+            width: 20%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .categories-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .categories-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .categories-section ul li a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .categories-section ul li a:hover {
+            color: #0056b3;
+        }
+        
+        /* Products section styles */
+        .products-section {
+            width: 75%;
+        }
+        
+        .products-section .product {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .products-section .product img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        
+        .products-section .product h3 {
+            margin: 0;
+            flex: 1;
+        }
+        
+        .products-section .product span {
+            color: #007bff;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        
+        .products-section .product p {
+            margin: 0;
+            margin-right: 20px;
+        }
+        
+        .products-section .product button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .products-section .product button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Footer styles */
+        footer {
+            text-align: center;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        footer ul li {
+            margin-right: 20px;
+        }
+        
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="icon">TT</div> TomsTown
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ecommerce.html">E-commerce</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="dating.html">Dating</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products..." id="search-input">
+                <button onclick="searchProducts()">Search</button>
+            </div>
+            <div class="cart">
+                <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="categories-section">
+            <div class="container">
+                <h2>Categories</h2>
+                <ul id="categories-list">
+                    <!-- Categories will be dynamically added here -->
+                </ul>
+            </div>
+        </section>
+        <section class="products-section">
+            <div class="container">
+                <h2>Products</h2>
+                <div id="products-list">
+                    <!-- Products will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TomsTown</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCategories();
+            loadProducts();
+        });
+
+        function loadCategories() {
+            const categoriesList = document.getElementById('categories-list');
+            const categories = ['Electronics', 'Books', 'Clothing', 'Home & Kitchen', 'Toys & Games'];
+            categories.forEach(category => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#';
+                a.textContent = category;
+                a.onclick = () => filterProducts(category);
+                li.appendChild(a);
+                categoriesList.appendChild(li);
+            });
+        }
+
+        function loadProducts() {
+            const productsList = document.getElementById('products-list');
+            const products = [
+                { name: 'Laptop', category: 'Electronics', price: '$999', image: 'laptop.jpg' },
+                { name: 'Book', category: 'Books', price: '$19', image: 'book.jpg' },
+                { name: 'T-Shirt', category: 'Clothing', price: '$29', image: 'tshirt.jpg' },
+                { name: 'Blender', category: 'Home & Kitchen', price: '$59', image: 'blender.jpg' },
+                { name: 'Toy Car', category: 'Toys & Games', price: '$39', image: 'toycar.jpg' }
+            ];
+
+            productsList.innerHTML = '';
+            products.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.className = 'product';
+                const productImg = document.createElement('img');
+                productImg.src = product.image;
+                const productName = document.createElement('h3');
+                productName.textContent = product.name;
+                const productCategory = document.createElement('span');
+                productCategory.textContent = product.category;
+                const productPrice = document.createElement('p');
+                productPrice.textContent = product.price;
+                const addToCartButton = document.createElement('button');
+                addToCartButton.textContent = 'Add to Cart';
+                addToCartButton.onclick = () => addToCart(product);
+
+                productElement.appendChild(productImg);
+                productElement.appendChild(productName);
+                productElement.appendChild(productCategory);
+                productElement.appendChild(productPrice);
+                productElement.appendChild(addToCartButton);
+                productsList.appendChild(productElement);
+            });
+        }
+
+        function filterProducts(category) {
+            const productsList = document.getElementById('products-list');
+            const products = [
+                { name: 'Laptop', category: 'Electronics', price: '$999', image: 'laptop.jpg' },
+                { name: 'Book', category: 'Books', price: '$19', image: 'book.jpg' },
+                { name: 'T-Shirt', category: 'Clothing', price: '$29', image: 'tshirt.jpg' },
+                { name: 'Blender', category: 'Home & Kitchen', price: '$59', image: 'blender.jpg' },
+                { name: 'Toy Car', category: 'Toys & Games', price: '$39', image: 'toycar.jpg' }
+            ];
+
+            productsList.innerHTML = '';
+            products.filter(product => product.category === category).forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.className = 'product';
+                const productImg = document.createElement('img');
+                productImg.src = product.image;
+                const productName = document.createElement('h3');
+                productName.textContent = product.name;
+                const productCategory = document.createElement('span');
+                productCategory.textContent = product.category;
+                const productPrice = document.createElement('p');
+                productPrice.textContent = product.price;
+                const addToCartButton = document.createElement('button');
+                addToCartButton.textContent = 'Add to Cart';
+                addToCartButton.onclick = () => addToCart(product);
+
+                productElement.appendChild(productImg);
+                productElement.appendChild(productName);
+                productElement.appendChild(productCategory);
+                productElement.appendChild(productPrice);
+                productElement.appendChild(addToCartButton);
+                productsList.appendChild(productElement);
+            });
+        }
+
+        function searchProducts() {
+            const searchInput = document.getElementById('search-input').value.toLowerCase();
+            const productsList = document.getElementById('products-list');
+            const products = [
+                { name: 'Laptop', category: 'Electronics', price: '$999', image: 'laptop.jpg' },
+                { name: 'Book', category: 'Books', price: '$19', image: 'book.jpg' },
+                { name: 'T-Shirt', category: 'Clothing', price: '$29', image: 'tshirt.jpg' },
+                { name: 'Blender', category: 'Home & Kitchen', price: '$59', image: 'blender.jpg' },
+                { name: 'Toy Car', category: 'Toys & Games', price: '$39', image: 'toycar.jpg' }
+            ];
+
+            productsList.innerHTML = '';
+            products.filter(product => product.name.toLowerCase().includes(searchInput)).forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.className = 'product';
+                const productImg = document.createElement('img');
+                productImg.src = product.image;
+                const productName = document.createElement('h3');
+                productName.textContent = product.name;
+                const productCategory = document.createElement('span');
+                productCategory.textContent = product.category;
+                const productPrice = document.createElement('p');
+                productPrice.textContent = product.price;
+                const addToCartButton = document.createElement('button');
+                addToCartButton.textContent = 'Add to Cart';
+                addToCartButton.onclick = () => addToCart(product);
+
+                productElement.appendChild(productImg);
+                productElement.appendChild(productName);
+                productElement.appendChild(productCategory);
+                productElement.appendChild(productPrice);
+                productElement.appendChild(addToCartButton);
+                productsList.appendChild(productElement);
+            });
+        }
+
+        function addToCart(product) {
+            const cartCount = document.getElementById('cart-count');
+            let count = parseInt(cartCount.textContent);
+            cartCount.textContent = count + 1;
+
+            // Add product to cart logic (to be implemented)
+            console.log(`${product.name} added to cart`);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
